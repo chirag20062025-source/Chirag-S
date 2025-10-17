@@ -1,0 +1,62 @@
+import { motion } from 'framer-motion';
+Whether it’s building a modern web experience, crafting visual designs, or experimenting with new tech ideas,
+I aim to bring ideas to life with precision and purpose.
+</p>
+</motion.section>
+
+
+{/* Skills */}
+<motion.section
+className="mt-12 text-center"
+initial={{ opacity: 0 }}
+whileInView={{ opacity: 1 }}
+transition={{ duration: 1 }}>
+<h2 className="text-2xl font-semibold mb-4">Skills</h2>
+<div className="flex flex-wrap justify-center gap-3">
+{["HTML", "CSS", "JavaScript", "React", "Python", "UI/UX Design"].map((skill) => (
+<span key={skill} className="px-4 py-2 bg-white shadow rounded-full text-gray-700 text-sm font-medium">
+{skill}
+</span>
+))}
+</div>
+</motion.section>
+
+
+{/* Projects */}
+<motion.section
+className="mt-12 max-w-4xl w-full"
+initial={{ opacity: 0 }}
+whileInView={{ opacity: 1 }}
+transition={{ duration: 1 }}>
+<h2 className="text-2xl font-semibold text-center mb-6">Projects</h2>
+<div className="grid md:grid-cols-2 gap-6">
+{[
+{ title: 'Portfolio Website', desc: 'A responsive personal website built with React and Tailwind CSS.' },
+{ title: 'Creative Design App', desc: 'An app focused on creativity, color, and minimalism.' },
+].map((project) => (
+<div key={project.title} className="bg-white shadow rounded-2xl p-6 hover:shadow-lg transition">
+<h3 className="font-semibold text-lg mb-2">{project.title}</h3>
+<p className="text-gray-600 text-sm">{project.desc}</p>
+</div>
+))}
+</div>
+</motion.section>
+
+
+{/* Contact */}
+<motion.footer
+className="mt-16 mb-10 text-center"
+initial={{ opacity: 0 }}
+whileInView={{ opacity: 1 }}
+transition={{ duration: 0.8 }}>
+<h2 className="text-2xl font-semibold mb-3">Let's Connect</h2>
+<div className="flex justify-center gap-6">
+<a href="https://github.com/" target="_blank" rel="noreferrer" className="text-gray-700 hover:text-black"><Github size={24} /></a>
+<a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="text-gray-700 hover:text-blue-700"><Linkedin size={24} /></a>
+<a href="mailto:chirag@example.com" className="text-gray-700 hover:text-red-600"><Mail size={24} /></a>
+</div>
+<p className="text-gray-500 text-sm mt-4">© 2025 Chirag. All rights reserved.</p>
+</motion.footer>
+</div>
+);
+}

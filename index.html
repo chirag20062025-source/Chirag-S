@@ -1,2 +1,127 @@
-<html><h1>Hello,I'm Chirag</h1>
-<h2>hi i am software developer</h2></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Space</title>
+  <style>
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      background: url('https://images.unsplash.com/photo-1580422333073-3c6b2b6f0c4e?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    header h1 {
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      margin-top: 20px;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    section {
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    section p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* 3D Planet */
+    .planet-container {
+      perspective: 1000px;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .planet {
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle at 30% 30%, #00f, #000);
+      border-radius: 50%;
+      animation: spin 10s linear infinite;
+      box-shadow: 0 0 30px #00f;
+      transform-style: preserve-3d;
+    }
+    @keyframes spin {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 0.9em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Space</h1>
+    <nav>
+      <ul>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#planet">3D Planet</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>We aim to inspire curiosity and exploration of the cosmos through immersive digital experiences. Join us as we journey beyond the stars.</p>
+  </section>
+
+  <section id="planet">
+    <h2>3D Planet</h2>
+    <div class="planet-container">
+      <div class="planet"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out to us at <strong>space@explore.com</strong> for collaborations, questions, or cosmic conversations.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Explore Space. All rights reserved.</p>
+  </footer>
+</body>
+</html>

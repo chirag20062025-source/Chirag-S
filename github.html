@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CHIRAG S</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #00ff88;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+      border: 1px solid rgba(0, 255, 136, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #00ff88;
+      text-shadow: 0 0 15px #00ff88;
+      margin-bottom: 1rem;
+    }
+
+    .tagline {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #bfffe0;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background: #00ff88;
+      color: #0f0f0f;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ff88;
+      transition: all 0.3s ease;
+    }
+
+    .links a:hover {
+      transform: scale(1.1);
+      background: #0f0f0f;
+      color: #00ff88;
+      border: 1px solid #00ff88;
+    }
+
+    .glow-ring {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,255,136,0.4), transparent 70%);
+      animation: pulse 4s infinite ease-in-out;
+      z-index: -1;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.2); opacity: 0.2; }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .tagline { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-ring"></div>
+  <div class="container">
+    <h1>CHIRAG S</h1>
+    <div class="tagline">Web & App Developer • UI/UX Designer • Tech Explorer</div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/chirag-s-826394384/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/chirag20062025-source" target="_blank">GitHub</a>
+    </div>
+  </div>
+</body>
+</html>
